@@ -7,14 +7,29 @@ The **MacPorts Project** is an open-source community initiative to design an eas
 - The MacPorts Guide - https://guide.macports.org/
 - The MacPorts FAQ - https://trac.macports.org/wiki/FAQ
 
-Please be aware that projects included in this repository may mainly be copies from existing ports and the applicable license condition of the original project may apply as appropriate. However, this repository is claiming cover of the MIT Licence for all content included. https://choosealicense.com/licenses/mit/
+Please be aware that projects included in this repository may mainly be copies from existing ports and the applicable license condition of the original project may apply as appropriate. However, this repository is claiming cover of the [MIT Licence](https://choosealicense.com/licenses/mit/) for all content included.
 - - - 
 # Existing ports addressed 
-## mxml
+## forked-daapd
+The version 25.0 of the [forked-daapd media server](https://ejurgensen.github.io/forked-daapd/) for macOS (using macports) is yet not available as a macports port and this commit is aimed at making a *forked-daapd v25.0 port* available.
 
 ## TBC
 to be continued
 
 # Newly invented ports
-(we may see)
+## mxml
+The tiny XML library [Mini-XML (mxml)](https://github.com/michaelrsweet/mxml) by Michael R Sweet seems to be quite useful and is a required library for the version 25.0 of the [forked-daapd media server](https://ejurgensen.github.io/forked-daapd/) for macOS (using macports).
+> Mini-XML is a small XML parsing library that you can use to read XML data files or strings in your application without requiring large non-standard libraries. Mini-XML only requires a "make" program and an ANSI C compatible compiler - GCC works, as do most vendors' ANSI C compilers.
+
+> The Mini-XML library is Copyright 2003-2017 by Michael R Sweet. License terms are described in the file "COPYING".
+
+Currently, mxml is not yet available as a macports port and this commit is aimed at making a *mxml port* available.
+
+Establishing a new *portfile* for mxml required two issues to be resolved through patches:
+1. Bug Report [Problem with MXML_CUSTOM in Version mxml-2.10 #201](https://github.com/michaelrsweet/mxml/issues/201)
+2. GNU [DESTDIR: Support for Staged Installs](http://www.gnu.org/prep/standards/html_node/DESTDIR.html)
+The new mxml 2.10 port is a newly invented port which installs successfuly on a macOS Sierra 10.12.6 environment with MacPorts 2.4.1 and is awaiting inclusion and testing with the a.m. version 25.0 of the forked-daapd media server now. There should be a commitment as new official port to the MacPorts project after the testing with forked-daapd is completed.
+
+## TBC
+to be continued
 - - - 
