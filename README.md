@@ -11,7 +11,7 @@ Please be aware that projects included in this repository may mainly be copies f
 - - - 
 # Existing ports addressed 
 ## forked-daapd
-The version 25.0 of the [forked-daapd media server](https://ejurgensen.github.io/forked-daapd/) for macOS (using macports) is yet not available as a macports port and this commit is aimed at making a *forked-daapd v25.0 port* available.
+The version 25.0 of the [forked-daapd media server](https://ejurgensen.github.io/forked-daapd/) for macOS (using macports) is yet not available as a macports port and I am aiming at making a *forked-daapd v25.0 port* available.
 
 ## TBC
 to be continued
@@ -23,12 +23,13 @@ The tiny XML library [Mini-XML (mxml)](https://github.com/michaelrsweet/mxml) by
 
 > The Mini-XML library is Copyright 2003-2017 by Michael R Sweet. License terms are described in the file "COPYING".
 
-Currently, mxml is not yet available as a macports port and this commit is aimed at making a *mxml port* available.
+Currently, mxml is not yet available as a macports port and I am aimed at making a *mxml port* available.
 
 Establishing a new *portfile* for mxml required two issues to be resolved through patches:
 1. Bug Report [Problem with MXML_CUSTOM in Version mxml-2.10 #201](https://github.com/michaelrsweet/mxml/issues/201)
 2. GNU [DESTDIR: Support for Staged Installs](http://www.gnu.org/prep/standards/html_node/DESTDIR.html)
-The new mxml 2.10 port is a newly invented port which installs successfuly on a macOS Sierra 10.12.6 environment with MacPorts 2.4.1 and is awaiting inclusion and testing with the a.m. version 25.0 of the forked-daapd media server now. There should be a commitment as new official port to the MacPorts project after the testing with forked-daapd is completed.
+
+My test version of a mxml 2.10 port is a newly invented port which installs successfuly on a macOS Sierra 10.12.6 environment with MacPorts 2.4.1 and is awaiting inclusion and testing with the a.m. version 25.0 of the forked-daapd media server now. There will be a commit of mxml to become a new official port to the MacPorts project after the testing with forked-daapd is completed.
 
 ## TBC
 to be continued
