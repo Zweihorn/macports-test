@@ -1,7 +1,7 @@
 # -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
 # $Id$
 
-PortSystem 			1.0
+PortSystem 		1.0
 
 name            	libinotify-kqueue
 version         	20170711
@@ -10,28 +10,28 @@ categories      	devel
 platforms       	darwin
 license         	MIT
 maintainers     	openmaintainer
-revision			1
-epoch				0
+revision		1
+epoch			0
 
 description     	library with inotify API to monitor file system activities
-long_description    The purpose of this library is to provide inotify API on the \
-					BSD family of operating systems. The library uses kqueue(2) \
-					to monitor the file system activity.
+long_description    	The purpose of this library is to provide inotify API on the \
+			BSD family of operating systems. The library uses kqueue(2) \
+			to monitor the file system activity.
 
 homepage        	https://github.com/libinotify-kqueue/libinotify-kqueue
 master_sites		${homepage}/files/1189065/
 
 distname        	libinotify-${version}
 
-checksums           rmd160  ab5aac65fc6fb9298f32fdd3b81d384d3cad9df9 \
-                    sha256  f71c430f8cd83c4e2d991823f5bbb1a968dbaac442b7447b23d44497cba40695
+checksums           	rmd160  ab5aac65fc6fb9298f32fdd3b81d384d3cad9df9 \
+                    	sha256  f71c430f8cd83c4e2d991823f5bbb1a968dbaac442b7447b23d44497cba40695
 
-depends_build       port:autoconf \
-					port:automake \
-					port:libtool
+depends_build       	port:autoconf \
+			port:automake \
+			port:libtool
 
-use_autoreconf      yes
+use_autoreconf      	yes
 
 pre-configure		{
 	system -W ${worksrcpath} "autoreconf -fvi"
-					}
+			}
