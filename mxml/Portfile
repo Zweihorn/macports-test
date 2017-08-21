@@ -1,7 +1,7 @@
 # -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
 # $Id$
 
-PortSystem 			  1.0
+PortSystem 		1.0
 
 name            	mxml
 version         	2.10
@@ -10,24 +10,24 @@ categories      	net devel
 platforms       	darwin
 license         	Mini-XML License, September 18, 2010
 maintainers     	openmaintainer
-epoch				      0
+epoch			0
 
 description     	Tiny XML library.
-long_description  Mini-XML is a small XML parsing library that you can use to read XML \
-					        data files or strings in your application without requiring large \
-					        non-standard libraries. Mini-XML only requires a "make" program and \
-					        an ANSI C compatible compiler - GCC works, as do most \
-					        vendors' ANSI C compilers.
+long_description  	Mini-XML is a small XML parsing library that you can use to read XML \
+			data files or strings in your application without requiring large \
+			non-standard libraries. Mini-XML only requires a "make" program and \
+			an ANSI C compatible compiler - GCC works, as do most \
+			vendors' ANSI C compilers.
 
 homepage        	https://github.com/michaelrsweet/mxml
-master_sites		  ${homepage}/releases/download/release-${version}
+master_sites		${homepage}/releases/download/release-${version}
 
 distname        	mxml-${version}
 
-checksums         rmd160  b06a20ed436a7b6845acc66f523985cae8a175eb \
-                  sha256  267ff58b64ddc767170d71dab0c729c06f45e1df9a9b6f75180b564f09767891
+checksums         	rmd160  b06a20ed436a7b6845acc66f523985cae8a175eb \
+                  	sha256  267ff58b64ddc767170d71dab0c729c06f45e1df9a9b6f75180b564f09767891
 
 patchfiles      	patch-mxml-file.c-issue201.diff \
-					        patch-Makefile.in-DESTDIR.diff
+			patch-Makefile.in-DESTDIR.diff
 
 configure.args		--prefix=${prefix}
