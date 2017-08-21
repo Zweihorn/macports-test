@@ -19,3 +19,11 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+- - - 
+
+Please be aware that projects i.e. ports included in this repository may 
+mainly be copies from existing ports and/or open-source software projects 
+and the applicable license condition of the original project may apply as 
+appropriate. However, this repository is claiming cover by the MIT Licence
+for all content and the Software included in the macports-test repository.
