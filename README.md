@@ -7,7 +7,9 @@ The **MacPorts Project** is an open-source community initiative to design an eas
 - The MacPorts Guide - https://guide.macports.org/
 - The MacPorts FAQ - https://trac.macports.org/wiki/FAQ
 
-Please be aware that projects i.e. ports included in this repository may mainly be copies from existing ports and/or open-source projects and the applicable license condition of the original project may apply as appropriate. However, this repository is claiming cover by the [MIT Licence](https://choosealicense.com/licenses/mit/) for all content included.
+The **macports-test project** is an open-source effort to develop *Portfile* definitions and patch files to simplify the task of compiling and installing open-source software on your Mac. The macports-test project is a user initiative and is neither an official part of the MacPorts project nor a direct part of the open-source software projects referenced. 
+
+Please be aware that projects i.e. ports included in this repository may mainly be copies from existing ports and/or open-source software projects and the applicable license condition of the original project may apply as appropriate. However, this repository is claiming cover by the [MIT Licence](https://choosealicense.com/licenses/mit/) for all content included.
 - - - 
 # Existing ports addressed 
 ## forked-daapd
