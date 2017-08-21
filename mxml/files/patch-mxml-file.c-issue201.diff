@@ -1,0 +1,11 @@
+--- mxml-file.c.orig	2017-08-20 10:13:43.000000000 +0200
++++ mxml-file.c	2017-08-20 10:17:44.000000000 +0200
+@@ -2925,7 +2925,7 @@
+ 	    const char	*newline;	/* Last newline in string */
+ 
+ 
+-	    if ((data = (*global->custom_save_cb)(node)) == NULL)
++	    if ((data = (*global->custom_save_cb)(current)) == NULL)
+ 	      return (-1);
+ 
+ 	    if (mxml_write_string(data, p, putc_cb) < 0)
