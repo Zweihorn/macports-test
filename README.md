@@ -44,7 +44,7 @@ The tiny XML library [Mini-XML (mxml)](https://github.com/michaelrsweet/mxml) by
 Currently, mxml was not available as a MacPorts port and I am making an experimental *mxml port* available.
 
 Establishing a new *Portfile* for mxml required two issues to be resolved through patches:
-1. Bug Report [Problem with MXML_CUSTOM in Version mxml-2.10 #201](https://github.com/michaelrsweet/mxml/issues/201) - *patch-Makefile.in-DESTDIR.diff*
+1. Bug Report [Problem with MXML_CUSTOM in Version mxml-2.10 #201](https://github.com/michaelrsweet/mxml/issues/201) - *patch-mxml-file.c-issue201.diff*
 2. Missing GNU [DESTDIR: Support for Staged Installs](http://www.gnu.org/prep/standards/html_node/DESTDIR.html) - *patch-Makefile.in-DESTDIR.diff*
 
 My test version of a mxml 2.10 port is a newly formed port which installed successfuly on the commandline via the *port install mxml* command on a macOS Sierra 10.12.6 environment with MacPorts 2.4.1 and is awaiting inclusion and testing with the a.m. version 25.0 of the forked-daapd media server now. There will be a commit of mxml to hopefuly become a new official port to the MacPorts project after the testing with forked-daapd is completed.
