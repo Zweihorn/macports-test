@@ -7,35 +7,47 @@ The **MacPorts Project** is an open-source community initiative to design an eas
 - The MacPorts Guide - https://guide.macports.org/
 - The MacPorts FAQ - https://trac.macports.org/wiki/FAQ
 
-Please be aware one should use the [port lint](https://guide.macports.org/#using.port.lint) command if you modified a Portfile before submitting patches back to MacPorts. The lint action checks if the Portfile conforms to the MacPorts standards specified in Portfile Development.
+Please be aware one should use the [port lint](https://guide.macports.org/#using.port.lint) command if you modified a Portfile before submitting patches back to MacPorts. The lint action checks if the Portfile conforms to the [MacPorts development standards](https://guide.macports.org/#development).
 
 The **macports-test project** is an open-source effort to develop *Portfile* definitions and patch files to simplify the task of compiling and installing open-source software on your Mac. The macports-test project is a user initiative and is neither an official part of the MacPorts project nor a direct part of the open-source software projects referenced. 
 
 Please feel free to download and applicate any experimental ports of macports-test on your own Mac at your own risk. You may find the information of both the [MacPorts Guide section 4.6. Local Portfile Repositories](https://guide.macports.org/#development.local-repositories) and the [MacPorts Guide section 2.2.4. Install Multiple MacPorts Copies](https://guide.macports.org/#installing.macports.source.multiple) quite helpful for such experiments. Please feel free to comment on my macports-test efforts and I would be happy to learn of your findings of such experiments on your own Mac if possible.
 
-The revised versions of the existing ports addressed and my newly formed ports will be submitted as a pull request to the MacPorts project after completing basic application tests sufficiently to my best knowledge. If such experimental port will become available as an official port is solely up to the deliberations of the MacPorts team.
+The revised versions of the existing ports addressed and my newly formed ports will be submitted as a pull request to the MacPorts project after completing basic application tests sufficiently to my best knowledge. A final run of the [port lint](https://guide.macports.org/#using.port.lint) command shall ensure the *Portfile* conforms to the [MacPorts development standards](https://guide.macports.org/#development). If such an experimental port will become available as an official port is solely up to the deliberations of the MacPorts team. 
 
 - - - 
 
-# Existing Ports Addressed 
+# Existing Ports Revised 
 
 ## antlr3
+[ANTLRv3](http://www.antlr3.org), ANother Tool for Language Recognition, is the legacy version of a language tool that provides a framework for constructing recognizers, compilers, and translators from grammatical descriptions containing Java, C#, or C++ actions. 
 
-## forked-daapd
-The version 25.0 of the [forked-daapd media server](https://ejurgensen.github.io/forked-daapd/) for macOS (using MacPorts) is yet not available as a MacPorts port and I am aiming at making a *forked-daapd v25.0 port* available.
+By [ANTLR](http://www.antlr.org) is a more recent 4+ version available. IMHO it is unclear if this could add to *forked-daapd*.
 
 ## TBC
 to be continued
 
 # Newly Formed Ports
 
-## ANTLRv3
+## forked-daapd
+The [forked-daapd project](https://ejurgensen.github.io/forked-daapd/) by @ejurgensen is an open-source Linux/FreeBSD DAAP (iTunes) and MPD media server with support for AirPlay devices (multiroom), Apple Remote (and compatibles), Chromecast, Spotify and internet radio.
+
+>forked-daapd is an iTunes-compatible media server for sharing your media library over the local network with DAAP clients like iTunes. Like iTunes, it can be controlled by Apple Remote (and compatibles) and stream music directly to AirPlay devices. It also supports streaming to RSP clients (Roku devices) and streaming from Spotify.
+
+The [installation instructions for forked-daapd](https://github.com/ejurgensen/forked-daapd/blob/master/INSTALL) is an excellent source of documentation for developers. It contains instructions for installing forked-daapd for Raspbian (Raspberry Pi), Debian/Ubuntu, Fedora, FreeBSD and certainly ___macOS (using MacPorts)___. The following ports all have to be newly formed to establish a *Portfile* for forked-daapd.
+
+### forked-daapd 25.0
+The version 25.0 of the [forked-daapd media server](https://ejurgensen.github.io/forked-daapd/) for macOS (using MacPorts) is yet not available as a MacPorts port and I am aiming at making a *forked-daapd v25.0 port* available.
+
 
 ### antlr3
+The ANTLRv3 as a *Java* tool in the 3.5.2 version can downloded as *antlr-3.5.2-complete-no-st3.jar* package from the [ANTLRv3 Downloads](http://www.antlr3.org/download.html) page.
 
 ### libantlr3c
+The ANTLRv3 C runtime engine for the antlr3 parser in the 3.4 version can be downloded from http://www.antlr3.org/download/C as *libantlr3c-3.4.tar.gz* tarball.
 
-## libinotify-kqueue
+
+### libinotify-kqueue
 The [libinotify-kqueue library](https://github.com/libinotify-kqueue/libinotify-kqueue) by Dmitry Matveev and Vladimir Kondratiev seems to be quite useful and is a required library for the version 25.0 of the [forked-daapd media server](https://ejurgensen.github.io/forked-daapd/) for macOS (using MacPorts).
 > The purpose of this library is to provide inotify API on the BSD family of operating systems. The library uses kqueue(2) to monitor the file system activity.
 
@@ -47,7 +59,7 @@ Currently, libinotify-kqueue was not available as a MacPorts port and I am makin
 
 My test version of a libinotify-kqueue 20170711 port is a newly formed port which installed successfuly on the commandline via the *port install libinotify-kqueue* command on a macOS Sierra 10.12.6 environment with MacPorts 2.4.1 and is awaiting inclusion and testing with the a.m. version 25.0 of the forked-daapd media server now. There will be a commit of libinotify-kqueue to hopefuly become a new official port to the MacPorts project after the testing with forked-daapd is completed.
 
-## mxml
+### mxml
 The tiny XML library [Mini-XML (mxml)](https://github.com/michaelrsweet/mxml) by Michael R Sweet seems to be quite useful and is a required library for the version 25.0 of the [forked-daapd media server](https://ejurgensen.github.io/forked-daapd/) for macOS (using MacPorts).
 > Mini-XML is a small XML parsing library that you can use to read XML data files or strings in your application without requiring large non-standard libraries. Mini-XML only requires a "make" program and an ANSI C compatible compiler - GCC works, as do most vendors' ANSI C compilers.
 
