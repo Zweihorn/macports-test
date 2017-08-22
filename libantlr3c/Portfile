@@ -1,0 +1,31 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+
+name                libantlr3c
+version             3.4
+
+categories          lang java
+platforms           darwin
+license             License
+maintainers         nomaintainer
+
+revision            1
+epoch               0
+
+description         C runtime engine for the antlr3 parser (legacy version)
+long_description    ${description} ANTLRv3, ANother Tool for Language Recognition, is the \
+                    legacy version of a language tool that provides a framework for \
+                    constructing recognizers, compilers, and translators \
+                    from grammatical descriptions containing Java, C#, or \
+                    C++ actions. ANTLR is available in a more recent 4+ version. 
+
+homepage            http://www.antlr3.org
+master_sites        ${homepage}/download/C
+
+distname            libantlr3c-${version}
+
+checksums           rmd160  cbfc13e54f02d87cd82e0c4ca2136fa3fb43dff4 \
+                    sha256  ca914a97f1a2d2f2c8e1fca12d3df65310ff0286d35c48b7ae5f11dcc8b2eb52
+
+configure.args		--prefix=${prefix}
