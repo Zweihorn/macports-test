@@ -15,14 +15,22 @@ Please feel free to download and applicate any experimental ports of macports-te
 
 The revised versions of the existing ports addressed and my newly formed ports will be submitted as a pull request to the MacPorts project after completing basic application tests sufficiently to my best knowledge. A final run of the [port lint](https://guide.macports.org/#using.port.lint) command shall ensure the *Portfile* conforms to the [MacPorts development standards](https://guide.macports.org/#development). If such an experimental port will become available as an official port is solely up to the deliberations of the MacPorts team. 
 
+Currently the goal of a **forked-daapd** port is the main driver of my efforts.
+
 - - - 
 
 # Existing Ports Revised 
 
 ## antlr3
-[ANTLRv3](http://www.antlr3.org), ANother Tool for Language Recognition, is the legacy version of a language tool that provides a framework for constructing recognizers, compilers, and translators from grammatical descriptions containing Java, C#, or C++ actions. 
+[ANTLRv3](http://www.antlr3.org), ANother Tool for Language Recognition, is the legacy version of a language tool that provides a framework for constructing recognizers, compilers, and translators from grammatical descriptions containing Java, C#, or C++ actions.
 
-By [ANTLR](http://www.antlr.org) is a more recent 4+ version available. IMHO it is unclear if this could add to *forked-daapd*.
+> ANTLR, ANother Tool for Language Recognition, is a language tool that provides a framework for constructing recognizers, interpreters, compilers, and translators from grammatical descriptions containing actions in a variety of target languages. ANTLR provides excellent support for tree construction, tree walking, translation, error recovery, and error reporting.
+
+> Terence Parr is the maniac behind ANTLR and has been working on language tools since 1989.
+
+There is an official [antlr3 3.2 Portfile](https://github.com/macports/macports-ports/blob/master/lang/antlr3/Portfile) available but this does not meet the requirements for the b.m. **forked-daapd** port. Furthermore, I aim for a newly formed *antlr3-no-st3* to avoid conflicts with other ports depending on the antlr3 3.3 port and to better meet the forked-daapd port requirements at the same time.
+
+A more recent 4+ version of [ANTLR](http://www.antlr.org) is available. IMHO it is completlely unclear if this could be added to the forked-daapd port in the future.
 
 ## TBC
 to be continued
@@ -34,18 +42,28 @@ The [forked-daapd project](https://ejurgensen.github.io/forked-daapd/) by @ejurg
 
 >forked-daapd is an iTunes-compatible media server for sharing your media library over the local network with DAAP clients like iTunes. Like iTunes, it can be controlled by Apple Remote (and compatibles) and stream music directly to AirPlay devices. It also supports streaming to RSP clients (Roku devices) and streaming from Spotify.
 
-The [installation instructions for forked-daapd](https://github.com/ejurgensen/forked-daapd/blob/master/INSTALL) is an excellent source of documentation for developers. It contains instructions for installing forked-daapd for Raspbian (Raspberry Pi), Debian/Ubuntu, Fedora, FreeBSD and certainly ___macOS (using MacPorts)___. The following ports all have to be newly formed to establish a *Portfile* for forked-daapd.
+The [installation instructions for forked-daapd](https://github.com/ejurgensen/forked-daapd/blob/master/INSTALL) is an excellent source of documentation for developers. It contains instructions for installing forked-daapd for Raspbian (Raspberry Pi), Debian/Ubuntu, Fedora, FreeBSD and certainly macOS (using MacPorts). The following ports all have to be newly formed to establish a *Portfile* for forked-daapd first.
 
 ### forked-daapd 25.0
-The version 25.0 of the [forked-daapd media server](https://ejurgensen.github.io/forked-daapd/) for macOS (using MacPorts) is yet not available as a MacPorts port and I am aiming at making a *forked-daapd v25.0 port* available.
+The version 25.0 of the [forked-daapd media server](https://github.com/ejurgensen/forked-daapd/releases) for macOS (using MacPorts) is yet not available as a MacPorts port and my goal is to make a *forked-daapd v25.0 port* available.
 
+Unfortunately, a recent incompatibility between *gperf* and *gindent* is a main obstacle to get the experimental forked-daapd  port installed. Please refer to the MacPorts Ticket [#54466 assigned defect - gindent @2.2.11: build fails](https://trac.macports.org/ticket/54466) for the background. There seems to be a workaround procedure by downgrading gperf, building gindent, and then upgrading gperf again. However, I will have to follow the more cumbersome procedure as detailed by the [MacPorts Wiki: How to install an older version of a port](https://trac.macports.org/wiki/howto/InstallingOlderPort) after regrettably removing a prior gperf install, I presume.
 
-### antlr3
+Most if not all of the newly formed ports install successfuly on the commandline via the *port install* command on my current macOS Sierra 10.12.6 environment with XCode 8.3.3 and MacPorts 2.4.1 and are awaiting inclusion and testing with this version 25.0 of the forked-daapd media server now. There will be several commits of *Portfiles* which hopefuly become new official ports to the MacPorts project after the testing with forked-daapd is completed.
+
+### antlr3 / antlr3-no-st3
+There is an official antlr3 3.2 Portfile available (see above) but this does not meet the forked-daapd 25.0 requirements.
+
 The ANTLRv3 as a *Java* tool in the 3.5.2 version can downloded as *antlr-3.5.2-complete-no-st3.jar* package from the [ANTLRv3 Downloads](http://www.antlr3.org/download.html) page.
+
+By the command *port install antlr3* my test version of a antlr3 3.5.2 port installs successfuly on the a.m. envrironment. 
+
+The name of this port will be changed to to *antlr3-no-st3* to avoid disambiguation with the existing official antlr3 port.
 
 ### libantlr3c
 The ANTLRv3 C runtime engine for the antlr3 parser in the 3.4 version can be downloded from http://www.antlr3.org/download/C as *libantlr3c-3.4.tar.gz* tarball.
 
+By the command *port install libantlr3c* my test version of a libantlr3c 3.4 port installs successfuly on the a.m. environment. 
 
 ### libinotify-kqueue
 The [libinotify-kqueue library](https://github.com/libinotify-kqueue/libinotify-kqueue) by Dmitry Matveev and Vladimir Kondratiev seems to be quite useful and is a required library for the version 25.0 of the [forked-daapd media server](https://ejurgensen.github.io/forked-daapd/) for macOS (using MacPorts).
@@ -57,7 +75,7 @@ The [libinotify-kqueue library](https://github.com/libinotify-kqueue/libinotify-
 
 Currently, libinotify-kqueue was not available as a MacPorts port and I am making an experimental *libinotify-kqueue port* available.
 
-My test version of a libinotify-kqueue 20170711 port is a newly formed port which installed successfuly on the commandline via the *port install libinotify-kqueue* command on a macOS Sierra 10.12.6 environment with MacPorts 2.4.1 and is awaiting inclusion and testing with the a.m. version 25.0 of the forked-daapd media server now. There will be a commit of libinotify-kqueue to hopefuly become a new official port to the MacPorts project after the testing with forked-daapd is completed.
+By the command *port install libinotify-kqueue* my test version of a libinotify-kqueue 20170711 port installs successfuly on the a.m. environment. 
 
 ### mxml
 The tiny XML library [Mini-XML (mxml)](https://github.com/michaelrsweet/mxml) by Michael R Sweet seems to be quite useful and is a required library for the version 25.0 of the [forked-daapd media server](https://ejurgensen.github.io/forked-daapd/) for macOS (using MacPorts).
@@ -71,7 +89,7 @@ Establishing a new *Portfile* for mxml required two issues to be resolved throug
 1. Bug Report [Problem with MXML_CUSTOM in Version mxml-2.10 #201](https://github.com/michaelrsweet/mxml/issues/201) - *patch-mxml-file.c-issue201.diff*
 2. Missing GNU [DESTDIR: Support for Staged Installs](http://www.gnu.org/prep/standards/html_node/DESTDIR.html) - *patch-Makefile.in-DESTDIR.diff*
 
-My test version of a mxml 2.10 port is a newly formed port which installed successfuly on the commandline via the *port install mxml* command on a macOS Sierra 10.12.6 environment with MacPorts 2.4.1 and is awaiting inclusion and testing with the a.m. version 25.0 of the forked-daapd media server now. There will be a commit of mxml to hopefuly become a new official port to the MacPorts project after the testing with forked-daapd is completed.
+By the command *port install mxml* my test version of a mxml 2.10 port installs successfuly on the a.m. environment. 
 
 ## TBC
 to be continued
