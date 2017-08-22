@@ -1,0 +1,7 @@
+--- antlr3.orig	1970-01-01 01:00:00.000000000 +0100
++++ antlr3	2017-08-22 02:04:11.000000000 +0200
+@@ -0,0 +1,4 @@
++#!/bin/sh
++export CLASSPATH
++CLASSPATH=$CLASSPATH:__PREFIX__/share/java/__DISTNAME__.jar:__PREFIX__/share/java
++/usr/bin/java org.antlr.Tool \$*
