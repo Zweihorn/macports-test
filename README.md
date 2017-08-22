@@ -61,7 +61,7 @@ By the command *port install antlr3* my test version of a antlr3 3.5.2 port inst
 The name of this port will be changed to to *antlr3-no-st3* to avoid disambiguation with the existing official antlr3 port.
 
 ### libantlr3c
-The ANTLRv3 C runtime engine for the antlr3 parser in the 3.4 version can be downloded from http://www.antlr3.org/download/C as *libantlr3c-3.4.tar.gz* tarball.
+The ANTLRv3 C runtime engine for the antlr3 parser can be downloded from http://www.antlr3.org/download/C as *libantlr3c-3.4.tar.gz*  as tarball in the 3.4 version.
 
 By the command *port install libantlr3c* my test version of a libantlr3c 3.4 port installs successfuly on the a.m. environment. 
 
