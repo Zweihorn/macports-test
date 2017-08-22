@@ -1,0 +1,48 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+
+name                antlr3
+version             3.5.2
+
+categories          lang java
+platforms           darwin
+license             License
+maintainers         nomaintainer
+
+revision            1
+epoch               0
+
+description         antlr3 is ANother Tool for Language Recognition (legacy version)
+long_description    ANTLRv3, ANother Tool for Language Recognition, is the \
+                    legacy version of a language tool that provides a framework for \
+                    constructing recognizers, compilers, and translators \
+                    from grammatical descriptions containing Java, C#, or \
+                    C++ actions. ANTLR is available in a more recent 4+ version. 
+
+homepage            http://www.antlr3.org
+master_sites        ${homepage}/download
+
+distname            antlr-${version}-complete-no-st3
+
+checksums           rmd160  f870b068ee5fce51029a7491c7b6feaf19dff0c3 \
+                    sha256  46531814ba9739cdf20c6c1789c252d3d95b68932813d79fb8bbfdf8d5840417
+
+extract.suffix      .jar
+extract.only
+
+patchfiles          patch-antlr3-FILE.diff
+
+configure           {}
+
+build		            {}
+
+destroot            {
+    xinstall -d -m 0755 "${destroot}${prefix}/share/java/"
+    xinstall -m 0755 -W ${distpath} ${distname}.jar "${destroot}${prefix}/share/java/"
+    ln ${destroot}${prefix}/share/java/${distname}.jar ${destroot}${prefix}/share/java/antlr3.jar
+    
+    reinplace -W ${worksrcpath} "s|__PREFIX__|${prefix}|g" antlr3
+    reinplace -W ${worksrcpath} "s|__DISTNAME__|${distname}|g" antlr3
+    xinstall -m 0755 -W ${worksrcpath} antlr3 "${destroot}${prefix}/bin/"
+                    }
