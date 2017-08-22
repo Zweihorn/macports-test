@@ -7,13 +7,13 @@ The **MacPorts Project** is an open-source community initiative to design an eas
 - The MacPorts Guide - https://guide.macports.org/
 - The MacPorts FAQ - https://trac.macports.org/wiki/FAQ
 
-Please be aware one should use the [port lint](https://guide.macports.org/#using.port.lint) if you modified a Portfile before submitting patches back to MacPorts. The lint action checks if the Portfile conforms to the MacPorts standards specified in Portfile Development.
+Please be aware one should use the [port lint](https://guide.macports.org/#using.port.lint) command if you modified a Portfile before submitting patches back to MacPorts. The lint action checks if the Portfile conforms to the MacPorts standards specified in Portfile Development.
 
 The **macports-test project** is an open-source effort to develop *Portfile* definitions and patch files to simplify the task of compiling and installing open-source software on your Mac. The macports-test project is a user initiative and is neither an official part of the MacPorts project nor a direct part of the open-source software projects referenced. 
 
 Please feel free to download and applicate any experimental ports of macports-test on your own Mac at your own risk. You may find the information of both the [MacPorts Guide section 4.6. Local Portfile Repositories](https://guide.macports.org/#development.local-repositories) and the [MacPorts Guide section 2.2.4. Install Multiple MacPorts Copies](https://guide.macports.org/#installing.macports.source.multiple) quite helpful for such experiments. Please feel free to comment on my macports-test efforts and I would be happy to learn of your findings of such experiments on your own Mac if possible.
 
-The revised versions of the existing ports addressed and my newly formed ports will be submitted as a pull request to the MacPorts project after completing basic application tests sufficiently to my best knowledge. If such experimental port will become available as an official port IMHO is solely up to the deliberations of the MacPorts team.
+The revised versions of the existing ports addressed and my newly formed ports will be submitted as a pull request to the MacPorts project after completing basic application tests sufficiently to my best knowledge. If such experimental port will become available as an official port is solely up to the deliberations of the MacPorts team.
 
 - - - 
 
