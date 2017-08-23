@@ -11,7 +11,7 @@ Please be aware you should use the [port lint](https://guide.macports.org/#using
 
 The **macports-test project** is an open-source effort to develop *Portfile* definitions and patch files to simplify the task of compiling and installing open-source software on your Mac. The macports-test project is a user initiative and is neither an official part of the MacPorts project nor a direct part of the open-source software projects referenced. 
 
-Please feel free to download and test any experimental ports from macports-test on your own Mac at your own risk. You may find the information of both the [MacPorts Guide section 4.6. Local Portfile Repositories](https://guide.macports.org/#development.local-repositories) and the [MacPorts Guide section 2.2.4. Install Multiple MacPorts Copies](https://guide.macports.org/#installing.macports.source.multiple) quite helpful for such experiments. Please feel free to comment on my macports-test efforts and I would be happy to learn of your findings of such experiments on your own Mac if possible.
+Please feel free to download and test any experimental ports from macports-test on your own Mac at your own risk. Before you start this you may find the information of both the [MacPorts Guide section 4.6. Local Portfile Repositories](https://guide.macports.org/#development.local-repositories) and the [MacPorts Guide section 2.2.4. Install Multiple MacPorts Copies](https://guide.macports.org/#installing.macports.source.multiple) quite helpful for such experiments. Please feel free to comment on my macports-test efforts and I would be happy to learn of your findings of such experiments on your own Mac if possible.
 
 The revised versions of the existing ports addressed and my newly formed ports will be submitted as a pull request to the MacPorts project after completing basic application tests sufficiently to my best knowledge. A final run of the [port lint](https://guide.macports.org/#using.port.lint) command shall ensure the *Portfile* conforms to the [MacPorts development standards](https://guide.macports.org/#development). When and if such an experimental port will become available as an official port is solely at the deliberations of the MacPorts team. 
 
@@ -35,9 +35,11 @@ A more recent 4+ version of [ANTLR](http://www.antlr.org) is available. IMHO it 
 ## gperf @3.0.4
 This is an **outdated version of the gperf port** and please be advised to always install the gperf 3.1+ port from MacPorts instead.
 
-Although **forked-daapd requires gperf** this cannot be installed in its recent version due to a incompatibility between *gperf* and *gindent* causing a main obstacle. The workaround depends on the availability of the **outdated gperf @3.0.4 port** (see forked-daapd 25.0 below) and the combination of gperf @3.0.4_2 and gindent @2.2.11_0 can be built and installed successfully.
+Although forked-daapd requires gperf the latter cannot be installed in its recent version due to a incompatibility between *gperf* and *gindent* causing a broken build. The workaround depends on the availability of an outdated gperf port and the combination of gperf @3.0.4_2 and gindent @2.2.11_0 can be built and installed successfully.
 
-I make a copy of the **outdated gperf @3.0.4 port** available in this repository as the procedure to search and download an outdated port from the MacPorts repository could become quite cumbersome. This is quite experimental and solely to allow continued development of the experimental forked-daapd port as long as the a.m. issue is not resolved sufficiently.
+The recently introduced incompatibility between *gperf* and *gindent* is one of the obstacles in establishing the forked-daapd experimental port. Please refer to the MacPorts Ticket "[#54466 assigned defect - gindent @2.2.11: build fails](https://trac.macports.org/ticket/54466)" for background information. There is a workaround procedure by downgrading gperf, building gindent, and then upgrading gperf again. However, you would have to follow the well documented but cumbersome procedure as detailed by the [MacPorts Wiki: How to install an older version of a port](https://trac.macports.org/wiki/howto/InstallingOlderPort) if you could not reactivate a prior gperf @3.0.4 install.
+
+I make a copy of the **outdated gperf @3.0.4 port** available in this repository as the procedure to search and download an outdated port from the MacPorts repository could become quite a challenge. This is quite experimental and solely to allow continued development of the experimental forked-daapd port as long as the a.m. issue is not resolved sufficiently.
 
 ## TBC
 to be continued
@@ -56,9 +58,16 @@ The following ports all have to be newly formed in first place to establish a *P
 ### forked-daapd 25.0
 Starting with version 25.0 the [forked-daapd media server](https://github.com/ejurgensen/forked-daapd/releases) is certainly aimed at an installation on macOS (using MacPorts) but is yet not available at MacPorts. My goal is to make a *forked-daapd v25.0 port* available.
 
-Unfortunately, a recent incompatibility between *gperf* and *gindent* is a main obstacle to get the experimental forked-daapd  port established as both are required dependencies. Please refer to the MacPorts Ticket "[#54466 assigned defect - gindent @2.2.11: build fails](https://trac.macports.org/ticket/54466)" for background information. There is a workaround procedure by downgrading gperf, building gindent, and then upgrading gperf again. However, you would have to follow the more cumbersome procedure as detailed by the [MacPorts Wiki: How to install an older version of a port](https://trac.macports.org/wiki/howto/InstallingOlderPort) if you could not reactivate a prior gperf @3.0.4 install.
+Unfortunately, I found several obstacles in [available MacPorts ports](https://www.macports.org/ports.php) required by while developing the experimental forked-daapd Portfile:
 
-Most if not all of the newly formed ports for forked-daapd listed below were installed successfuly on the commandline via the *port install* command on my current macOS Sierra 10.12.6 environment with XCode 8.3.3 and MacPorts 2.4.1 and are awaiting inclusion and testing with this version 25.0 of the forked-daapd media server now. There will be several commits of *Portfiles* which hopefuly become new official ports to the MacPorts project after the testing with forked-daapd is completed.
+- [X] *gperf 3.1* - GNU perfect hash generator
+  - cannot be installed in its recent version due to a incompatibility between *gperf* and *gindent* causing a broken build (see *gperf @3.0.4* above)
+  - workaround available
+- [ ] *avahi 0.6.32* - implementation of the DNS Service Discovery and mDNS for Zeroconf Networking
+  - cannot be installed due to a "Undefined symbols for architecture x86_64" failure
+  - open
+
+On the positive side, most if not all of the newly formed ports for forked-daapd listed below were installed successfuly on the commandline via the *port install* command on my current macOS Sierra 10.12.6 environment with XCode 8.3.3 and MacPorts 2.4.1 and are awaiting inclusion and testing with this version 25.0 of the forked-daapd media server now. There will be several commits of *Portfiles* which hopefuly become new official ports to the MacPorts project after the testing with forked-daapd is completed.
 
 ### antlr3-no-st3
 There is an official antlr3 3.2 Portfile available (see above) but this does not meet the forked-daapd requirements.
