@@ -58,7 +58,7 @@ The following ports all have to be newly formed in first place to establish a *P
 ### forked-daapd 25.0
 Starting with version 25.0 the [forked-daapd media server](https://github.com/ejurgensen/forked-daapd/releases) is certainly aimed at an installation on macOS (using MacPorts) but is yet not available at MacPorts. My goal is to make a *forked-daapd v25.0 port* available.
 
-Unfortunately, I found several obstacles in [available MacPorts ports](https://www.macports.org/ports.php) required by while developing the experimental forked-daapd Portfile:
+Unfortunately, I found several obstacles in [available MacPorts ports](https://www.macports.org/ports.php) required while developing the experimental forked-daapd Portfile:
 
 - [X] *gperf 3.1* - GNU perfect hash generator
   - cannot be installed in its recent version due to a incompatibility between *gperf* and *gindent* causing a broken build (see *gperf @3.0.4* above)
