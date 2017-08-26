@@ -16,7 +16,7 @@ The **macports-test project** is an open-source effort to develop *Portfile* def
 Downloading and testing any experimental port definitions and/or experimental ports from macports-test onto your own Mac should be done deliberately at your own risk. Before you start this you may find the information of both the [MacPorts Guide section 4.6. Local Portfile Repositories](https://guide.macports.org/#development.local-repositories) and the [MacPorts Guide section 2.2.4. Install Multiple MacPorts Copies](https://guide.macports.org/#installing.macports.source.multiple) quite helpful for such experiments. 
 
 ## Issues
-The macports-test project page provides access to the [Github issue tracking page](https://github.com/Zweihorn/macports-test/issues). Please be aware that I am not the developer of the open-source software projects referenced by my experimental ports and this project is just a user initiative.
+The macports-test project page provides a [Github issue tracking page](https://github.com/Zweihorn/macports-test/issues). Please be aware that I am not the developer of the open-source software projects referenced by my experimental ports and this project is just a user initiative.
 
 ## Legal Stuff
 Copyright 2017 by Zweihorn. License terms should be described in the file "LICENSE" of a complete port download.
