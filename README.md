@@ -3,7 +3,7 @@
 Please refer to the [macports-test project Wiki](https://github.com/Zweihorn/macports-test/wiki) for further information.
 
 ## Introduction
-The **MacPorts Project** is an open-source community initiative to design an easy-to-use system for compiling, installing, and upgrading either command-line, X11 or Aqua based open-source software on the Mac operating system. There are many ways one can get involved with MacPorts and peer users, system administrators & developers alike.
+The **MacPorts Project** is an open-source community initiative to design an easy-to-use system for compiling, installing, and upgrading either command-line, X11 or Aqua based open-source software on the Mac operating system. There are many ways to get involved with MacPorts and peer users, system administrators & developers alike.
 
 - The MacPorts Project official homepage - https://www.macports.org
 - The MacPorts Guide - https://guide.macports.org/
