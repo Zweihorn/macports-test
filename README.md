@@ -1,4 +1,4 @@
-# The MacPorts-Test Repository
+# A MacPorts Test Repository
 ## Information
 Please refer to the [macports-test project Wiki](https://github.com/Zweihorn/macports-test/wiki) for further information.
 
